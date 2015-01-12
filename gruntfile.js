@@ -1,6 +1,9 @@
 'use strict';
 
 module.exports = function (grunt) {
+
+    var target = grunt.option('target') || '';
+
     // Unified Watch Object
     var watchFiles = {
         serverViews: ['app/views/**/*.*'],
@@ -174,4 +177,6 @@ module.exports = function (grunt) {
 
     // Test task.
     grunt.registerTask('test', ['env:test', 'mochaTest', 'karma:unit']);
+
+    //grunt.registerTask('deploy', ['build:' + target]);
 };
