@@ -59,3 +59,8 @@ mongod
 *.swp
 logs/
 build/
+
+
+# Application
+
+config/parameters.yml

@@ -1,15 +1,11 @@
 'use strict';
 
 var yaml = require('js-yaml'),
-    fs = require('fs'),
-    chalk = require('chalk');
+    fs = require('fs');
 
-//module.exports = yaml.safeLoad(fs.readFileSync(__dirname + '/parameters.yml', 'utf8'));
+// load configuration from parameters file
 
-module.exports = function() {
+var config = yaml.safeLoad(fs.readFileSync(__dirname + '/parameters.yml', 'utf8'));
 
-    return 'aaa';
-    //return yaml.safeLoad(fs.readFileSync(__dirname + '/parameters.yml', 'utf8'));
+module.exports = config.parameters;
 
-
-};

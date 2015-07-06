@@ -4,7 +4,6 @@
  * Module dependencies.
  */
 var _ = require('lodash'),
-    params = require('./parameters'),
     glob = require('glob');
 
 /**
@@ -19,7 +18,7 @@ module.exports = _.extend(
  * Get files by glob patterns
  */
 module.exports.getGlobbedFiles = function (globPatterns, removeRoot) {
-    console.log(params.toString());
+
     // For context switching
     var _this = this;
 
